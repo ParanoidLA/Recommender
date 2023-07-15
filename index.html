@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant and Cafe Recommendations</title>
+    <style>
+      /* CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .navbar {
+        background-color: #f4f4f4;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar li {
+        margin: 0 10px;
+      }
+
+      .navbar a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .categories {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+      }
+
+      .category-card {
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+        width: 200px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .category-card h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .category-card p {
+        font-size: 16px;
+        color: #777;
+      }
+
+      .user-dropdown {
+        position: relative;
+        display: inline-block;
+        padding-right: 4cm;
+      }
+
+      .user-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+
+      .user-dropdown-content a {
+        color: #333;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+      }
+
+      .user-dropdown:hover .user-dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Restaurant and Cafe Recommendations</h1>
+    </header>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/fav">Favorites</a></li>
+        <li><a href="/insta">Instagram's Pick</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+
+      <div class="user-dropdown">
+        <button class="user-dropbtn">User</button>
+        <div class="user-dropdown-content">
+          <a href="#">Your Past Visits</a>
+          <a href="#">Your Favorites</a>
+          <a href="#">Your Wishlist</a>
+          <a href="/login">Login</a>
+          <a href="#">Logout</a>
+          <a href="/signup">Signup</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Welcome to our website!</h1>
+      <p>
+        Find the best cafes and restaurants in our area based on different
+        categories.
+      </p>
+
+      <div class="categories">
+        <div class="category-card">
+          <h2>Vegetarian-Friendly</h2>
+          <p>Discover great options for vegetarians.</p>
+        </div>
+
+        <div class="category-card">
+          <h2>Couples</h2>
+          <p>Perfect places for a romantic date.</p>
+        </div>
+
+        <div class="category-card">
+          <h2>Birthday Party</h2>
+          <p>Celebrate your special day in style.</p>
+        </div>
+
+        <div class="category-card">
+          <h2>Budget-Friendly</h2>
+          <p>Enjoy delicious meals without breaking the bank.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

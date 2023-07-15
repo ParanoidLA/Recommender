@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant and Cafe Recommendations - Sign Up</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .signup-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .form-group button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Restaurant and Cafe Recommendations</h1>
+  </header>
+  
+  <div class="container">
+    <div class="signup-container">
+      <h1>Sign Up</h1>
+      
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+      </div>
+      
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="owner">Restaurant/Cafe Owner</option>
+          <option value="enjoyer">Enjoyer</option>
+          <option value="blogger">Food Blogger</option>
+        </select>
+      </div>
+      
+      <div id="owner-fields" class="form-group" style="display: none;">
+        <label for="restaurant-name">Restaurant/Cafe Name</label>
+        <input type="text" id="restaurant-name" placeholder="Enter your restaurant/cafe name">
+      </div>
+      
+      <div id="blogger-fields" class="form-group" style="display: none;">
+        <label for="blog-name">Blog Name</label>
+        <input type="text" id="blog-name" placeholder="Enter your blog name">
+      </div>
+      
+      <div class="form-group">
+        <button onclick="signup()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Inline JavaScript for category-based field display
+    var categorySelect = document.getElementById('category');
+    var ownerFields = document.getElementById('owner-fields');
+    var bloggerFields = document.getElementById('blogger-fields');
+    
+    categorySelect.addEventListener('change', function() {
+      if (categorySelect.value === 'owner') {
+        ownerFields.style.display = 'block';
+        bloggerFields.style.display = 'none';
+      } else if (categorySelect.value === 'blogger') {
+        ownerFields.style.display = 'none';
+        bloggerFields.style.display = 'block';
+      } else {
+        ownerFields.style.display = 'none';
+        bloggerFields.style.display = 'none';
+      }
+    });
+    
+    function signup() {
+      // Add your signup logic here
+      // Retrieve form values and process accordingly
+      // For demonstration purposes, this function only logs the form values
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var category = categorySelect.value;
+      
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Password:', password);
+      console.log('Category:', category);
+      
+      if (category === 'owner') {
+        var restaurantName = document.getElementById('restaurant-name').value;
+        console.log('Restaurant/Cafe Name:', restaurantName);
+      } else if (category === 'blogger') {
+        var blogName = document.getElementById('blog-name').value;
+        console.log('Blog Name:', blogName);
+      }
+      
+      // Redirect to login page or perform further actions as required
+    }
+  </script>
+</body>
+</html>
+

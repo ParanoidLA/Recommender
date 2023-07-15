@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant and Cafe Recommendations - Favorites</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .navbar {
+      background-color: #f4f4f4;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar li {
+      margin: 0 10px;
+    }
+    
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    
+    .favorites-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .favorite-item {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .favorite-item h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .favorite-item p {
+      font-size: 16px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Restaurant and Cafe Recommendations</h1>
+  </header>
+  
+  <nav class="navbar">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/fav">Favorites</a></li>
+        <li><a href="/insta">Instagram's Pick</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    
+    <div class="user-dropdown">
+      <button class="user-dropbtn">User</button>
+      <div class="user-dropdown-content">
+        <a href="#">Your Past Visits</a>
+        <a href="#">Your Favorites</a>
+        <a href="#">Your Wishlist</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h1>Your Favorites</h1>
+    
+    <ul class="favorites-list">
+      <li class="favorite-item">
+        <h2>Restaurant A</h2>
+        <p>Description of Restaurant A</p>
+      </li>
+      <li class="favorite-item">
+        <h2>Cafe B</h2>
+        <p>Description of Cafe B</p>
+      </li>
+      <li class="favorite-item">
+        <h2>Restaurant C</h2>
+        <p>Description of Restaurant C</p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
